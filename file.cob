@@ -28,7 +28,7 @@
         100-MAIN.
             OPEN INPUT StudentFile
             PERFORM UNTIL WS-EOF = "Y"
-                READ StudentFile INTO StudentRecord
+                READ StudentFile
                   at end move "Y" to WS-EOF
                   not at end DISPLAY StudentId SPACE
                     StudentName SPACE StudentAge
