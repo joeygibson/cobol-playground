@@ -18,10 +18,6 @@
           05 StudentAge PIC 99.
 
         WORKING-STORAGE SECTION.
-      * 01  WS-STUDENT.
-      *   05 WS-STUDENT-ID PIC 9(9).
-      *   05 WS-STUDENT-NAME PIC X(20).
-      *   05 WS-STUDENT-AGE PIC 99.
         01 WS-EOF PIC X VALUE "N".
 
         PROCEDURE DIVISION.
