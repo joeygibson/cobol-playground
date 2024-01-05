@@ -18,8 +18,9 @@
         01 OVECTOR PIC X(100).
         01 OVECTOR-SIZE PIC S9(4) COMP.
       
+        PROCEDURE DIVISION.  
       * Compile the regular expression
-           MOVE "Hello world" TO PATTERN.
+            MOVE "Hello world" TO PATTERN.
        
            CALL "pcre_compile" USING 
                    PATTERN 
