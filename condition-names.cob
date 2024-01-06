@@ -17,6 +17,14 @@
               88 Is-C value "C", "c".
               88 Is-D value "D", "d".
               88 Is-F value "F", "f".
+
+       01  CountryCode PIC 999 VALUE ZEROES.
+           88 BritishCountry VALUES 3, 7, 10, 15.
+
+       01  CurrencyCode PIC 99 VALUE ZEROES.
+           88 CurrencyIsPound VALUE 14.
+           88 CurrencyIsEuro VALUE 03.
+           88 CurrencyIsDollar VALUE 28.
        
        PROCEDURE DIVISION.
        Begin.
@@ -66,6 +74,19 @@
 
            IF Is-F
               DISPLAY "Z entered"
+           END-IF
+
+           DISPLAY 'Enter country code: ' WITH NO ADVANCING.
+           ACCEPT CountryCode.
+
+           IF BritishCountry THEN
+              SET CurrencyIsPound TO TRUE
+           END-IF
+
+           IF CurrencyIsPound THEN
+              DISPLAY "Pound sterling used in this country"
+           ELSE
+              DISPLAY "Country does not use sterling"
            END-IF
 
            STOP RUN.
