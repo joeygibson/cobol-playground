@@ -6,4 +6,4 @@ BUILD_DIR=build
 
 mkdir -p ${BUILD_DIR}
 
-cobc -x -o ${BUILD_DIR}/$OUT_FILE $IN_FILE
+cobc -Wall -x -o ${BUILD_DIR}/$OUT_FILE $IN_FILE
